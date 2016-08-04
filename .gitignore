@@ -8,5 +8,5 @@ app/*/*.map
 npm-debug.log
 e2e
 typings
-*.md
+./*.md
 
