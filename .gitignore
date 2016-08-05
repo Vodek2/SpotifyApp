@@ -5,6 +5,8 @@ app/*.js
 app/*.map
 app/*/*.js
 app/*/*.map
+app/*/*/*.js
+app/*/*/*.map
 npm-debug.log
 e2e
 typings
