@@ -1,14 +1,17 @@
 import { Component } from '@angular/core';
-import {NavbarTopComponent} from './components/navbar-top/navbar-top.component';
-import { ROUTER_DIRECTIVES } from '@angular/router';
-import {SpotifyService} from './services/spotify.service';
+import {NavbarComponent} from './components/navbar/navbar.component';
+import {ROUTER_DIRECTIVES} from '@angular/router';
+import {SearchComponent} from './components/search/search.component';
+import {AboutComponent} from './components/about/about.component';
 import {HTTP_PROVIDERS} from '@angular/http';
+import {SpotifyService} from './services/spotify.service';
 
 @Component({
-    moduleId: module.id,
+    moduleId:module.id,
     selector: 'my-app',
     templateUrl: 'app.component.html',
-    directives: [ROUTER_DIRECTIVES, NavbarTopComponent],
-    providers: [SpotifyService, HTTP_PROVIDERS]
+    directives:[ROUTER_DIRECTIVES, NavbarComponent],
+    precompile:[SearchComponent,AboutComponent],
+    providers:[HTTP_PROVIDERS, SpotifyService]
 })
 export class AppComponent { }

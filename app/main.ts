@@ -1,9 +1,10 @@
 import { bootstrap }    from '@angular/platform-browser-dynamic';
-
+import {appRouterProviders} from './app.routes';
 import { AppComponent } from './app.component';
+import {disableDeprecatedForms, provideForms} from '@angular/forms';
 
-import { appRouterProviders } from './app.routes';
-
-bootstrap(AppComponent,[ appRouterProviders])
-
-.catch(err => console.error(err));
+bootstrap(AppComponent, [
+    appRouterProviders,
+    disableDeprecatedForms(),
+    provideForms()
+    ]);

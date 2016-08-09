@@ -1,25 +1,29 @@
 import { Component } from '@angular/core';
 import {SpotifyService} from '../../services/spotify.service';
-import {Artist} from '../../Artist';
+import {Artist} from '../../../Artist';
+import {ROUTER_DIRECTIVES} from '@angular/router';
 
 @Component({
-    moduleId: module.id,
+    moduleId:module.id,
     selector: 'search',
-    templateUrl: 'search.component.html'
+    templateUrl: 'search.component.html',
+    providers:[SpotifyService],
+    directives:[ROUTER_DIRECTIVES]
 })
-export class SearchComponent {
+export class SearchComponent { 
     searchStr:string;
-    searchRes:Artist[];
-
-    constructor(private _spotifyService: SpotifyService){
-
+    searchRes: Artist[];
+    appName:string;
+    
+    constructor(private _spotifyService:SpotifyService){
+        this.appName = '03_Spotify';
+        
     }
-
+    
     searchMusic(){
-        // console.log(this.searchStr);
         this._spotifyService.searchMusic(this.searchStr)
-        .subscribe(res=>{
-            this.searchRes= res.artists.items;
-        })
+            .subscribe(res => {
+                this.searchRes = res.artists.items;
+            })
     }
- }
+}
