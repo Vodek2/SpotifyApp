@@ -13,6 +13,7 @@ var AboutComponent = (function () {
     function AboutComponent() {
     }
     AboutComponent = __decorate([
+        //<==== this one
         core_1.Component({
             moduleId: module.id,
             selector: 'about',

@@ -4,6 +4,7 @@ import {SpotifyService} from '../../services/spotify.service';
 import {Artist} from '../../../Artist';
 import {Album} from '../../../Album';
 import {ActivatedRoute} from '@angular/router';
+import myGlobals = require('../../my_globals'); //<==== this one
 
 @Component({
     moduleId:module.id,
@@ -15,10 +16,12 @@ export class ArtistComponent implements OnInit{
     id:string;
     artist: Artist[];
     albums:Album[];
+   
     
     constructor(
         private _spotifyService:SpotifyService,
         private _route:ActivatedRoute){
+            
         
     }
     
