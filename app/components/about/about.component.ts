@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import myGlobals = require('../../my_globals'); //<==== this one
+// import myGlobals = require('../../my_globals'); //<==== this one
 
 @Component({
     moduleId:module.id,

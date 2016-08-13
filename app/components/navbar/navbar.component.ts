@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {ROUTER_DIRECTIVES} from '@angular/router';
-import myGlobals = require('../../my_globals'); //<==== this one
+// import myGlobals = require('../../my_globals'); //<==== this one
 
 @Component({
     moduleId:module.id,

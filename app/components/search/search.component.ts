@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {SpotifyService} from '../../services/spotify.service';
 import {Artist} from '../../../Artist';
 import {ROUTER_DIRECTIVES} from '@angular/router';
-import myGlobals = require('../../my_globals'); //<==== this one
+
 
 @Component({
     moduleId:module.id,
